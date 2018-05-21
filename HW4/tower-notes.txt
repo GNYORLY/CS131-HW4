@@ -1,0 +1,15 @@
+For speedup/1, I decided to get the runtime of finding the answer T to a 4x4
+tower puzzle with a specified count for both tower/3 and plain_tower/3. The
+ratio ended up being around 1.625.
+
+For ambiguous/4, by inputting a number N to indicate the size of the puzzle,
+it can find puzzles that match the following criteria: they are size N, they have the
+same count values, and they are different from each other.
+
+Here is one such result:
+
+?- ambiguous(6,C,T1,T2).
+
+C = counts([6,3,4,2,2,1],[1,2,2,4,2,4],[6,3,4,2,2,1],[1,2,2,4,2,4])
+T1 = [[1,2,3,4,5,6],[2,1,4,3,6,5],[3,4,5,6,1,2],[4,3,6,5,2,1],[5,6,1,2,3,4],[6,5,2,1,4,3]]
+T2 = [[1,2,3,4,5,6],[2,1,4,6,3,5],[3,4,2,5,6,1],[4,6,5,3,1,2],[5,3,6,1,2,4],[6,5,1,2,4,3]]
